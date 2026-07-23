@@ -13,7 +13,6 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/api/chat', require('./src/routes/chat'));
 app.use('/api/exec', require('./src/routes/exec'));
 app.use('/api/git', require('./src/routes/git'));
 app.use('/api/files', require('./src/routes/files'));
