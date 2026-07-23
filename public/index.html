@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lonely AI Agent</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#a78bfa" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Lonely AI</span>
+      </div>
+      <button id="new-chat-btn" title="New Chat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="chat-history"></div>
+    <div class="sidebar-footer">
+      <span class="ws-dot" id="ws-dot"></span>
+      <span id="ws-status">Connecting...</span>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header id="topbar">
+      <div class="topbar-left">
+        <button id="sidebar-toggle" class="icon-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <select id="model-select"></select>
+      </div>
+      <div class="topbar-right">
+        <label class="stream-toggle" title="Stream mode — typewriter effect">
+          <span class="toggle-label">Stream</span>
+          <div class="toggle-wrap">
+            <input type="checkbox" id="stream-toggle" checked />
+            <span class="slider-pill"></span>
+          </div>
+        </label>
+        <button class="icon-btn" id="clear-btn" title="Clear chat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="messages"></div>
+
+    <div id="input-area">
+      <div id="input-box">
+        <textarea id="user-input" placeholder="Ask Lonely AI anything..." rows="1"></textarea>
+        <button id="send-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <p class="input-hint">Lonely AI can run Python · JS · C++ · Lua · Bash • Control files & git</p>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
